@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+    "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+  <definition name="base" template="/WEB-INF/templates/template.jsp">
+    <put-attribute name="header" value="/WEB-INF/templates/header.jsp" />
+    <put-attribute name="body" value="" />
+    <put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
+  </definition>
+
+  <definition name="index" extends="base">
+    <put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+  </definition>
+
+  <definition name="user" extends="base">
+    <put-attribute name="body" value="/WEB-INF/jsp/user.jsp" />
+  </definition>
+
+  <definition name="createTrip" extends="base">
+    <put-attribute name="body" value="/WEB-INF/jsp/createTrip.jsp" />
+  </definition>
+
+  <definition name="registration" extends="base">
+    <put-attribute name="body" value="/WEB-INF/jsp/registration.jsp" />
+  </definition>
+
+  <definition name="admin" extends="base">
+    <put-attribute name="header" value="/WEB-INF/templates/adminHeader.jsp" />
+    <put-attribute name="body" value="/WEB-INF/jsp/admin.jsp" />
+  </definition>
+
+  <definition name="editProfile" extends="base">
+    <put-attribute name="body" value="/WEB-INF/jsp/editProfile.jsp" />
+  </definition>
+
+  <definition name="showTrips" extends="base">
+    <put-attribute name="body" value="/WEB-INF/jsp/showTrips.jsp" />
+  </definition>
+
+  <definition name="findTrip" extends="base">
+    <put-attribute name="body" value="/WEB-INF/jsp/findTrip.jsp" />
+  </definition>
+
+  <definition name="adminPointsManager" extends="base">
+    <put-attribute name="header" value="/WEB-INF/templates/adminHeader.jsp" />
+    <put-attribute name="body" value="/WEB-INF/jsp/adminPointsManager.jsp" />
+  </definition>
+
+  <definition name="addNewPNP" extends="base">
+    <put-attribute name="header" value="/WEB-INF/templates/adminHeader.jsp" />
+    <put-attribute name="body" value="/WEB-INF/jsp/addNewPNP.jsp" />
+  </definition>
+
+  <definition name="403" extends="base">
+    <put-attribute name="header" value="" />
+    <put-attribute name="body" value="/WEB-INF/jsp/403.jsp" />
+    <put-attribute name="footer" value="" />
+  </definition>
+
+  <definition name="error" extends="base">
+    <put-attribute name="body" value="/WEB-INF/jsp/error.jsp" />
+  </definition>
+
+  <definition name="maps" extends="base">
+    <put-attribute name="body" value="/WEB-INF/jsp/maps.jsp" />
+  </definition>
+
+  <definition name="about" extends="base">
+    <put-attribute name="body" value="/WEB-INF/jsp/about.jsp" />
+  </definition>
+
+  <definition name="confirmBooking" extends="base">
+    <put-attribute name="body" value="/WEB-INF/jsp/confirmBooking.jsp" />
+  </definition>
+
+</tiles-definitions>

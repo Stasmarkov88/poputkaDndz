@@ -1,0 +1,37 @@
+body,
+input,
+button,
+select,
+textarea,
+h1, h2, h3, h4, h5, h6,
+.navbar-search .search-query {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+#banner {
+  max-width: 150%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+#hidden {
+  display: none;
+}
+
+#visible {
+  display: block;
+}
+
+.big {
+  width: 100%;
+}
+
+.nav > li > a { padding-top: 0px !important; padding-bottom: 0px !important; }
+
+.nav {
+  float: none !important;
+  margin-top: 2.5px;
+  margin-bottom: 0px;
+}
+
+.navbar { min-height: 20px !important }

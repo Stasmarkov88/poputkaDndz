@@ -1,0 +1,28 @@
+/*Sticky footer styles*/
+/*-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /*Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  max-width: 1480px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /*Set the fixed height of the footer here */
+  height: 62px;
+}
+
+.container-fluid {
+  max-width: 1480px;
+}
+
+.well{
+margin-bottom: 0px;}
+

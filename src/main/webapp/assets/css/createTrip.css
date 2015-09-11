@@ -1,0 +1,29 @@
+table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+.customTableHead {
+  background-color: #f9f9f9;
+}
+
+tbody td {
+  background-color: #EEEEEE;
+}
+
+tr td:first-child,
+tr th:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+tr td:last-child,
+tr th:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.space{
+  margin-bottom: 20pt;
+  margin-top: 20pt;
+}

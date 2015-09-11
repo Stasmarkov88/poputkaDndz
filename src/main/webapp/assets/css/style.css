@@ -1,0 +1,72 @@
+.displayNone {
+  display: none;
+}
+
+.displayOn {
+  display: block;
+}
+
+.whiteBackground {
+  background-color: white;
+}
+
+#deleteContent {
+  -webkit-animation-duration: 200ms;
+  -moz-animation-duration: 200ms;
+  -ms-animation-duration: 200ms;
+  -o-animation-duration: 200ms;
+}
+
+#changeContent {
+  -webkit-animation-duration: 200ms;
+  -moz-animation-duration: 200ms;
+  -ms-animation-duration: 200ms;
+  -o-animation-duration: 200ms;
+}
+
+#confirmError {
+  -webkit-animation-duration:1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+}
+
+#successMessage{
+  -webkit-animation-duration:2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+}
+
+#errorMessage{
+  -webkit-animation-duration:2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+}
+
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+thead th {
+  background-color: #006DCC;
+  color: white;
+}
+
+tbody td {
+  background-color: white;
+}
+
+tr td:first-child,
+tr th:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+tr td:last-child,
+tr th:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px; }
