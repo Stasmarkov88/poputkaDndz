@@ -2,15 +2,13 @@ package com.easygoapp.domain;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
- * Created by Kir Kolesnikov on 04.03.2015.
+ * Created by Stanislav Markov mailto: stasmarkov88@gmail.com
  */
 @Entity
-@Table(name = "user_role")
+@Table(name = "USER_ROLE")
 public class UserRole extends AbstractPersistable<Long> {
 
     @Column(name = "role", nullable = false)

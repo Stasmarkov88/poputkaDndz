@@ -16,15 +16,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Kir Kolesnikov on 04.03.2015.
+ * Created by Stanislav Markov mailto: stasmarkov88@gmail.com
  */
-//@Service
+
 @Component("customUserDetailsService")
 public class CustomUserDetailService implements UserDetailsService {
 
     @Autowired
     private UserService userService;
-
 
     @Override
     @Transactional(readOnly = true)

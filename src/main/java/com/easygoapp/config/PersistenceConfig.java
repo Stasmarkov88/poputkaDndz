@@ -46,7 +46,7 @@ public class PersistenceConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() throws IOException {
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource());
-        entityManagerFactoryBean.setPackagesToScan(/*RootConfig.DOMAIN_PACKAGE*/ "com.easygoapp.domain");
+        entityManagerFactoryBean.setPackagesToScan("com.easygoapp.domain");
 
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         entityManagerFactoryBean.setJpaVendorAdapter(vendorAdapter);
@@ -62,8 +62,7 @@ public class PersistenceConfig {
         return transactionManager;
     }
 
-
-    private Properties getHibernateProperties() throws IOException {
+    protected Properties getHibernateProperties() throws IOException {
         PropertiesFactoryBean pfb = new PropertiesFactoryBean();
         pfb.setLocation(new ClassPathResource("hibernate.properties"));
         pfb.afterPropertiesSet();

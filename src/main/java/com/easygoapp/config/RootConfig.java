@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Import;
 @Configuration
 @Import({
         PersistenceConfig.class,
-        SecurityConfig.class,
-        MailConfig.class
+        SecurityConfig.class
+//        MailConfig.class
 })
 @ComponentScan("com.easygoapp.service")
 public class RootConfig {

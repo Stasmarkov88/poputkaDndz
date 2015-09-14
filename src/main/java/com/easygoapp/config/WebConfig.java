@@ -15,12 +15,11 @@ import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 /**
- * Created by Kir Kolesnikov on 02.03.2015.
+ * Created by Stanislav Markov mailto: stasmarkov88@gmail.com
  */
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.easygoapp.controllers")
-//@ComponentScan(RootConfig.CONTROLLERS_PACKAGE)
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Override
@@ -29,15 +28,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/WEB-INF/jsp/**").addResourceLocations("/jsp/");
         registry.addResourceHandler("/WEB-INF/templates/**").addResourceLocations("/templates/");
     }
-
-//    @Bean
-//    public InternalResourceViewResolver setupViewResolver() {
-//        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-//        resolver.setPrefix("/");
-//        resolver.setSuffix(".jsp");
-//        resolver.setViewClass(JstlView.class);
-//        return resolver;
-//    }
 
     @Bean
     public ViewResolver viewResolver() {

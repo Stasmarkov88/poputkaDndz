@@ -3,14 +3,13 @@ package com.easygoapp.domain;
 import com.easygoapp.type.Gender;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.hibernate.validator.constraints.Email;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by Markov on 24.02.2015.
+ * Created by Stanislav Markov mailto: stasmarkov88@gmail.com
  */
 
 @Entity
@@ -35,7 +34,6 @@ public class User extends AbstractPersistable<Long> {
     @Column(name = "car")
     private String car;
 
-    @Email
     @Column(name = "email")
     private String email;
 
@@ -80,11 +78,6 @@ public class User extends AbstractPersistable<Long> {
 
     public void setPassengerLanding(PassengerLanding passengerLanding) {
         this.passengerLanding = passengerLanding;
-    }
-
-    @Override
-    public void setId(Long id) {
-        super.setId(id);
     }
 
     public String getCar() {

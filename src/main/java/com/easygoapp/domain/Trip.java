@@ -5,33 +5,34 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.springframework.data.domain.Persistable;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.sql.Timestamp;
 import java.util.List;
 
 /**
- * Created by Markov on 24.02.2015.
+ * Created by Stanislav Markov mailto: stasmarkov88@gmail.com
  */
 @Entity
 @Table(name = "TRIP")
 public class Trip implements Persistable<Long> {
 
-    @Id @GeneratedValue private Long id;
+    @Id
+    @GeneratedValue
+    @Column(name = "trip_id")
+    private Long id;
 
     @Column(name = "start_trip", nullable = false)
     private Timestamp startTime;
 
     @ManyToOne
+    @JoinColumn(name = "id")
     private User driver;
 
     @OneToMany(mappedBy = "trip")
     private List<PassengerLanding> passengerLanding;
 
-    @NotNull
     @Column(name = "car_capacity", nullable = false)
     private Integer carCapacity;
 
-    @NotNull
     @Column(name = "price")
     private Double price;
 
@@ -59,7 +60,6 @@ public class Trip implements Persistable<Long> {
     public void setId(Long id) {
         this.id = id;
     }
-
 
     public List<PassengerLanding> getPassengerLanding() {
         return passengerLanding;

@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created by Станислав on 28.02.2015.
+ * Created by Stanislav Markov mailto: stasmarkov88@gmail.com
  */
 
 @Repository

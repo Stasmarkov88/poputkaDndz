@@ -3,6 +3,7 @@ package com.easygoapp.domain;
 import org.springframework.data.domain.Persistable;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "PASSENGER_LANDING")
@@ -17,7 +18,7 @@ public class PassengerLanding implements Persistable<Long> {
     private Trip trip;
 
     @OneToOne
-    @JoinColumn(name = "passenger_id")
+    @JoinColumn(name = "id")
     private User passenger;
 
     @Column(name = "description", nullable = false)
@@ -58,5 +59,31 @@ public class PassengerLanding implements Persistable<Long> {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "PassengerLanding{" +
+                "id=" + id +
+                ", trip=" + trip +
+                ", passenger=" + passenger +
+                ", description='" + description + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PassengerLanding that = (PassengerLanding) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(trip, that.trip) &&
+                Objects.equals(passenger, that.passenger) &&
+                Objects.equals(description, that.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, trip, passenger, description);
     }
 }
